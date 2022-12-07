@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="layout del examen">
+    <meta name="author" content="Edu">
+    <link rel="stylesheet" href="./CSS/estilo.css">
+    <title>Buscaminas - Contacto</title>
+</head>
+
+<body>
+    <header>
+        <div id="bandera1">
+            <img src=".\Imagenes\bandera.png" alt="bandera">
+        </div>
+        <h1>BUSCAMINAS</h1>
+        <div id="bandera2">
+            <img src=".\Imagenes\bandera.png" alt="bandera">
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="juego.html">Juego</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="configuracion.html">Configuracion</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="infocreador.html">El creador</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Contacto</h2>
+        <p class="pGrande"><strong>Si tiene algun problema, sugerencia o simplemente quiere ponerse en contacto con el
+                autor, puede complementar
+                este formulario: </strong></p>
+        <form id="contacto" action="contacto.php" method="post">
+            <label for="nombreyapellidos"> Nombre y apellidos: </label>
+            <input type="text" id="nombreyapellidos" name="nombreyapellidos">
+            <label for="email"> Email de contacto: </label>
+            <input type="email" id="email" name="email">
+            <label for="motivo">Motivo del correo: </label>
+            <select name="motivo" id="motivo">
+                <option value="motivopersonal">Motivo personal</option>
+                <option value="motivoprofesional">Motivo profesional</option>
+            </select>
+            <label for="mensaje">Mensaje a enviar: </label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+            <div id="terminos">
+                <input type="checkbox" id="condiciones" name="condiciones">
+                <label for="condiciones">Acepto los <a href="terminosycondicones.html">terminos y
+                        condiciones.</a></label>
+            </div>
+            <input class="boton" type="submit" value="Contactar">
+        </form>
+    </main>
+
+</body>
+
+</html>

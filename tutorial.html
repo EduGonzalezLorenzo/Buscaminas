@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="layout del examen">
+    <meta name="author" content="Edu">
+    <link rel="stylesheet" href="./CSS/estilo.css">
+    <title>Buscaminas - Tutorial</title>
+</head>
+
+<body>
+    <header>
+        <div id="bandera1">
+            <img src=".\Imagenes\bandera.png" alt="bandera">
+        </div>
+        <h1>BUSCAMINAS</h1>
+        <div id="bandera2">
+            <img src=".\Imagenes\bandera.png" alt="bandera">
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="juego.html">Juego</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="configuracion.html">Configuracion</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="infocreador.html">El creador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Tutorial</h2>
+        <section>
+            <h3>Objetivo del Juego</h3>
+            <p>Encontrar todas las casillas que no tienen una mina debajo sin superar el tiempo disponible. Para esto el jugador tiene dos opciones, marcar todas las casillas que 
+                tienen una mina debajo con una bandera o clicar en todas las casillas que no tienen una mina. Si durante este proceso el jugador clica una casilla que tenga una
+                mina será inmediatamente eliminado y debera volver a empezar en un nuevo tablero. </p>
+        </section>
+        <section>
+            <h3>Mecanica del juego</h3>
+            <P>Existen dos mecánicas básicas:</P>
+            <ul>
+                <li>
+                    -Clic izquierdo: comprueba si hay alguna bomba en esa casilla. Pueden pasar tres cosas:
+                    <ul>
+                        <li class="instrucciones"> Que haya una bomba: el jugador pierde la partida. <img
+                                src="Imagenes/ejemplocasillabomba.PNG" alt="ejemplo de una casilla con bomba"> </li>
+                        <li class="instrucciones"> Que no haya una bomba pero si alguna alguna pegada a esa casilla: la
+                            casilla se marcará con
+                            un número, el cual nos indicará cuantas bombas hay en las casillas contiguas a ella. Por
+                            ejemplo, si al clicar en una casilla esta muestra un 2 querrá decir que, pegado a la casilla
+                            que acabamos de clicar, existen 2 casillas con una mina debajo. <img
+                                src="Imagenes/ejemplocasillaconnumero.png" alt="ejemplo de una casilla con número">
+                        </li>
+                        <li class="instrucciones">Que no haya una bomba y no haya ninguna bomba cerca de la casilla:
+                            esto hará que todas las
+                            casillas al rededor de esta se levante hasta encontrar las casillas que si tienen bombas al
+                            rededor. <img src="Imagenes/ejemplocasillavacia.PNG" alt="ejemplo de una casilla vacia">
+                        </li>
+                    </ul>
+                </li>
+                <li>-Clic derecho: Marca una casilla.
+                    <ul>
+                        <li class="instrucciones">Esto unicamente sirve como ayuda visual para el jugador, que puede
+                            marcar las casillas sospechosas de tener una bomba debajo. Por ejemplo, en el caso anterior
+                            de una
+                            casilla con un 4 podriamos, con algo más de información, marcar las casillas en las que
+                            creemos que
+                            puede haber una bomba y evitar clicarlas por accidente. <img
+                                src="Imagenes/ejemplocasillabandera.PNG"
+                                alt="ejemplo de una casilla marcada con una bandera"></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h3>Videotutorial</h3>
+            <iframe src="https://www.youtube.com/embed/Oes6IrpctJ0" title="Tutorial"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </section>
+    </main>
+</body>
+
+</html>

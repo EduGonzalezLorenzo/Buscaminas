@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="layout del examen">
+    <meta name="author" content="Edu">
+    <link rel="stylesheet" href="./CSS/estilo.css">
+    <title>Buscaminas - Juego</title>
+</head>
+
+<body>
+    <header>
+        <div id="bandera1">
+            <img src=".\Imagenes\bandera.png" alt="bandera">
+        </div>
+        <h1>BUSCAMINAS</h1>
+        <div id="bandera2">
+            <img src=".\Imagenes\bandera.png" alt="bandera">
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="juego.html">Juego</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="configuracion.html">Configuracion</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="infocreador.html">El creador</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Juego</h2>
+        <div id="gameDisplay">
+            <div id="timerBox">
+                <h3>Temporizador</h3>
+                <p id="timer"></p>
+                <h3>Limite de tiempo</h3>
+                <p id="limiteTiempo"></p>
+
+                <h3>Nombre de jugador</h3>
+                <div id="menuPlayerName">
+                    <p>Introcuce tu nombre para poder encontrarte en el Ranking <br> ¡Si es que logras entrar!</p>
+                    <input type="text" id="playerName"></input>
+                    <button type="button" onclick="saveName()">Guardar Nombre</button>
+                </div>
+            </div>
+            <div id="game">
+                <p id="gameStatus"></p>
+                <canvas id="canvas" width="500" height="500"> </canvas>
+            </div>
+            <div id="AjustesYRanking">
+                <h3>Ajustes de juego</h3>
+                <div id="gameConfig">
+                    <p id="configuracionActual"></p>
+                    <button type="button" onclick="restartGame()">Reiniciar partida</button>
+                </div>
+                <h3>Ranking</h3>
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Dificultad</th>
+                        <th>Tiempo</th>
+                    </tr>
+                    <tr>
+                        <td id="n1"></td>
+                        <td id="d1"></td>
+                        <td id="t1"></td>
+                    </tr>
+                    <tr>
+                        <td id="n2"></td>
+                        <td id="d2"></td>
+                        <td id="t2"></td>
+                    </tr>
+                    <tr>
+                        <td id="n3"></td>
+                        <td id="d3"></td>
+                        <td id="t3"></td>
+                    </tr>
+                    <tr>
+                        <td id="n4"></td>
+                        <td id="d4"></td>
+                        <td id="t4"></td>
+                    </tr>
+                    <tr>
+                        <td id="n5"></td>
+                        <td id="d5"></td>
+                        <td id="t5"></td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+        <script src="./JavaScript/buscaminas.js"> </script>
+    </main>
+</body>
+
+</html>

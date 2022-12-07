@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <meta name="description" content="layout del examen">
+    <meta name="author" content="Edu">
+    <link rel="stylesheet" href="./CSS/estilo.css">
+    <title>Buscaminas - Configuración</title>
+</head>
+
+<body>
+    <header>
+        <div id="bandera1">
+            <img src=".\Imagenes\bandera.png" alt="bandera">
+        </div>
+        <h1>BUSCAMINAS</h1>
+        <div id="bandera2">
+            <img src=".\Imagenes\bandera.png" alt="bandera">
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="juego.html">Juego</a></li>
+                <li><a href="tutorial.html">Tutorial</a></li>
+                <li><a href="configuracion.html">Configuracion</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="infocreador.html">El creador</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Configuración del juego</h2>
+        <p class="pGrande"><strong>Puedes configurar tu partida de dos maneras:</strong></p>
+        <section>
+            <h3 class="config">Configuración predeterminada. :</h3>
+            <form class="configForm" method="get" action="juego.html">
+                <p>Elige un nivel de dificultad prediseñado por el creador. </p>
+                <p>En esta configuración tus puntuaciones se registrarán en el ranking. Cualquier registro en una
+                    dificultad superior será siempre mejor que el de una dificultad inferior, independientemente del
+                    tiempo:</p>
+                <label for="dificultad">Dificultad: </label>
+                <select name="dificultad" id="dificultad">
+                    <option value="Fácil">Fácil</option>
+                    <option value="Intermedio">Intermedio</option>
+                    <option value="Difícil">Dificil</option>
+                </select>
+                <input class="boton" type="submit" onclick="getPredConfig()" value="Aceptar configuración">
+            </form>
+        </section>
+
+        <section>
+            <h3 class="config">Configuración personalizada:</h3>
+            <form class="configForm" method="get" action="juego.html">
+                <p>Configura al detalle como quieres que sea tu partida(IMPORTANTE, LAS PUNTUACIONES CON ESTA
+                    CONFIGURACION NO SERÁN REGISTRADAS):</p>
+                <label for="nMines">Número de bombas (entre 1 y 20): </label>
+                <input type="number" id="nMines" name="nMines" min="1" max="20">
+                <label for="columns">Tamaño de la cuadricula (entre 2 y 30): </label>
+                <input type="number" id="columns" name="columns" min="2" max="30">
+                <label for="time">Tiempo disponible para acabar la partida (entre 30 y 300 segundos):</label>
+                <input type="number" id="time" name="time" min="30" max="300">
+                <input class="boton" type="submit" onclick="getConfig()" value="Aceptar configuración personalizada">
+            </form>
+        </section>
+
+        <script src="./JavaScript/configuracion.js">
+        </script>
+    </main>
+</body>
+
+</html>
